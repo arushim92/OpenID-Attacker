@@ -67,7 +67,8 @@ public class ReportGui extends javax.swing.JPanel {
 
         generateReportButton.setText("Generate Report");
         generateReportButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 generateReportButtonActionPerformed(evt);
             }
         });
@@ -77,14 +78,16 @@ public class ReportGui extends javax.swing.JPanel {
 
         saveResultsButton.setText("Save Results");
         saveResultsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveResultsButtonActionPerformed(evt);
             }
         });
 
         loadResultsButton.setText("Load Results");
         loadResultsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loadResultsButtonActionPerformed(evt);
             }
         });
@@ -104,14 +107,16 @@ public class ReportGui extends javax.swing.JPanel {
 
         removeReportButton.setText("Remove Report");
         removeReportButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 removeReportButtonActionPerformed(evt);
             }
         });
 
         includeTrainingCheckBox.setText("Include Training");
         includeTrainingCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 includeTrainingCheckBoxActionPerformed(evt);
             }
         });

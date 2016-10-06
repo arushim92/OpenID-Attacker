@@ -23,7 +23,6 @@ import java.awt.Component;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 import wsattacker.sso.openid.attacker.log.RequestType;
-import static wsattacker.sso.openid.attacker.log.RequestType.XRDS;
 
 public class TypeRenderer extends DefaultTableCellRenderer {
 

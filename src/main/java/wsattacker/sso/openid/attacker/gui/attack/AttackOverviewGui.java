@@ -74,7 +74,7 @@ public class AttackOverviewGui extends javax.swing.JPanel implements ObservableL
 
     @Override
     public void listElementsAdded(ObservableList list, int index, int length) {
-        List<AttackParameter> addedParameters = (List<AttackParameter>) list;
+        List<AttackParameter> addedParameters = list;
         int last = index + length;
         for (int i = index; i < last; ++i) {
             AttackParameter parameter = addedParameters.get(i);
@@ -85,7 +85,7 @@ public class AttackOverviewGui extends javax.swing.JPanel implements ObservableL
 
     @Override
     public void listElementsRemoved(ObservableList list, int index, List oldElements) {
-        List<AttackParameter> removedParameters = (List<AttackParameter>) oldElements;
+        List<AttackParameter> removedParameters = oldElements;
         for (AttackParameter removed : removedParameters) {
             AbstractAttackParameterGui gui = (AbstractAttackParameterGui) parameterPanel.getComponent(index);
             gui.doUnbind();
@@ -150,7 +150,8 @@ public class AttackOverviewGui extends javax.swing.JPanel implements ObservableL
         bindingGroup.addBinding(binding);
 
         performAttack.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+            @Override
+			public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 performAttackStateChanged(evt);
             }
         });
@@ -168,14 +169,16 @@ public class AttackOverviewGui extends javax.swing.JPanel implements ObservableL
 
         removeButton.setText("Clear");
         removeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 removeButtonActionPerformed(evt);
             }
         });
 
         addButton.setText("Add");
         addButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addButtonActionPerformed(evt);
             }
         });

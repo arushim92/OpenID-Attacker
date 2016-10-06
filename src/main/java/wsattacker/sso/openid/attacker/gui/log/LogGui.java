@@ -31,7 +31,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextPane;
 import javax.swing.LayoutStyle;
-import javax.swing.table.DefaultTableModel;
 import org.jdesktop.beansbinding.AutoBinding;
 import org.jdesktop.beansbinding.BeanProperty;
 import org.jdesktop.beansbinding.Binding;
@@ -90,8 +89,10 @@ public class LogGui extends javax.swing.JPanel {
 
         jList1.setModel(new AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
+            @Override
+			public int getSize() { return strings.length; }
+            @Override
+			public Object getElementAt(int i) { return strings[i]; }
         });
         jScrollPane1.setViewportView(jList1);
 
@@ -149,7 +150,8 @@ public class LogGui extends javax.swing.JPanel {
 
         jButton1.setText("Clear Log");
         jButton1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });

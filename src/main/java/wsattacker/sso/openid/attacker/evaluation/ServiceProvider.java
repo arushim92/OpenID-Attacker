@@ -23,7 +23,6 @@ package wsattacker.sso.openid.attacker.evaluation;
 import wsattacker.sso.openid.attacker.evaluation.strategies.DetermineUserStrategy;
 import wsattacker.sso.openid.attacker.evaluation.strategies.LevenshteinAndCountingMatchesStrategy;
 import java.io.Serializable;
-import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

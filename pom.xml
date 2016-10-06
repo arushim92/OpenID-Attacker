@@ -114,14 +114,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jettyVersion>7.6.16.v20140903</jettyVersion>
     </properties>
- 
-    <repositories>
-       <repository>
-           <id>uk.ac.shef.wit</id>
-           <url>http://maven.mse.jhu.edu/m2repository/</url>
-       </repository>
-    </repositories>
- 
+ 	
     <dependencies>
         <dependency>
             <groupId>log4j</groupId>
@@ -227,6 +220,7 @@
             <version>2.12</version>
         </dependency>
         -->
+       
         <!-- Ghostdriver - for PhantomJS Browser -->
         
         <dependency>
@@ -234,13 +228,7 @@
             <artifactId>phantomjsdriver</artifactId>
             <version>1.2.0</version>
         </dependency>
-        
-        <!-- SimMetric - differences between Strings -->
-        <dependency>
-           <groupId>uk.ac.shef.wit</groupId>
-           <artifactId>simmetrics</artifactId>
-           <version>1.6.2</version>
-       </dependency>
+     
        
        <!-- DiffUtils - diff of string lists -->
        <!--<dependency>

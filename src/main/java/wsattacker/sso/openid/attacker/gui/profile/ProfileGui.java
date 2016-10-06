@@ -88,7 +88,8 @@ public class ProfileGui extends javax.swing.JPanel {
 
         saveNewButton.setText("Save as New");
         saveNewButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveNewButtonActionPerformed(evt);
             }
         });
@@ -112,7 +113,8 @@ public class ProfileGui extends javax.swing.JPanel {
 
         updateButton.setText("Update");
         updateButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateButtonActionPerformed(evt);
             }
         });
@@ -127,14 +129,16 @@ public class ProfileGui extends javax.swing.JPanel {
 
         loadButton.setText("Load");
         loadButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loadButtonActionPerformed(evt);
             }
         });
 
         deleteButton.setText("Delete");
         deleteButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteButtonActionPerformed(evt);
             }
         });

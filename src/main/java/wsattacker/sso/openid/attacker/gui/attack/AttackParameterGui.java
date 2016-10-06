@@ -123,9 +123,11 @@ public class AttackParameterGui extends AbstractAttackParameterGui {
         setMinimumSize(new Dimension(400, 89));
         setName("\"Parameter\""); // NOI18N
         addHierarchyBoundsListener(new HierarchyBoundsListener() {
-            public void ancestorMoved(HierarchyEvent evt) {
+            @Override
+			public void ancestorMoved(HierarchyEvent evt) {
             }
-            public void ancestorResized(HierarchyEvent evt) {
+            @Override
+			public void ancestorResized(HierarchyEvent evt) {
                 formAncestorResized(evt);
             }
         });
@@ -210,7 +212,8 @@ public class AttackParameterGui extends AbstractAttackParameterGui {
         bindingGroup.addBinding(binding);
 
         deleteButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 deleteButtonActionPerformed(evt);
             }
         });
@@ -224,7 +227,8 @@ public class AttackParameterGui extends AbstractAttackParameterGui {
         bindingGroup.addBinding(binding);
 
         reloadButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 reloadButtonActionPerformed(evt);
             }
         });
@@ -232,7 +236,8 @@ public class AttackParameterGui extends AbstractAttackParameterGui {
         upButton.setText("▲");
         upButton.setMargin(new Insets(2, 0, 2, 0));
         upButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 upButtonActionPerformed(evt);
             }
         });
@@ -240,7 +245,8 @@ public class AttackParameterGui extends AbstractAttackParameterGui {
         downButton.setText("▼");
         downButton.setMargin(new Insets(2, 0, 2, 0));
         downButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 downButtonActionPerformed(evt);
             }
         });

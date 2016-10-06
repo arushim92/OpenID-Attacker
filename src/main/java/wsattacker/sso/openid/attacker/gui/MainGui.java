@@ -336,10 +336,12 @@ public class MainGui extends javax.swing.JFrame implements ActionListener {
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
-            public void windowOpened(WindowEvent evt) {
+            @Override
+			public void windowOpened(WindowEvent evt) {
                 formWindowOpened(evt);
             }
-            public void windowClosing(WindowEvent evt) {
+            @Override
+			public void windowClosing(WindowEvent evt) {
                 formWindowClosing(evt);
             }
         });
@@ -388,7 +390,8 @@ public class MainGui extends javax.swing.JFrame implements ActionListener {
         saveItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.ALT_MASK));
         saveItem.setText("Save Config");
         saveItem.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 saveItemActionPerformed(evt);
             }
         });
@@ -397,7 +400,8 @@ public class MainGui extends javax.swing.JFrame implements ActionListener {
         loadItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L, InputEvent.ALT_MASK));
         loadItem.setText("Load Config");
         loadItem.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 loadItemActionPerformed(evt);
             }
         });
@@ -407,7 +411,8 @@ public class MainGui extends javax.swing.JFrame implements ActionListener {
         clearLogMenuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.CTRL_MASK));
         clearLogMenuItem.setText("Clear Log");
         clearLogMenuItem.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 clearLogMenuItemActionPerformed(evt);
             }
         });
@@ -416,7 +421,8 @@ public class MainGui extends javax.swing.JFrame implements ActionListener {
 
         exitNoConfigSave.setText("Exit (without saving config)");
         exitNoConfigSave.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 exitNoConfigSaveActionPerformed(evt);
             }
         });
@@ -425,7 +431,8 @@ public class MainGui extends javax.swing.JFrame implements ActionListener {
         exitAndSaveConfig.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, InputEvent.META_MASK));
         exitAndSaveConfig.setText("Exit");
         exitAndSaveConfig.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 exitAndSaveConfigActionPerformed(evt);
             }
         });
@@ -569,7 +576,8 @@ public class MainGui extends javax.swing.JFrame implements ActionListener {
          * Create and display the form
          */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+            @Override
+			public void run() {
                 new MainGui().setVisible(true);
             }
         });

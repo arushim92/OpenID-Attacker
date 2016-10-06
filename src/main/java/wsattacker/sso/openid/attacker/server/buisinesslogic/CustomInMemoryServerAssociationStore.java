@@ -122,7 +122,7 @@ public class CustomInMemoryServerAssociationStore extends AbstractBean implement
     public synchronized Association load(String handle) {
         removeExpired();
 
-        return (Association) _handleMap.get(handle);
+        return _handleMap.get(handle);
     }
 
     @Override
@@ -144,7 +144,7 @@ public class CustomInMemoryServerAssociationStore extends AbstractBean implement
         Set handleToRemove = new HashSet();
         for (String handle : _handleMap.keySet()) {
 
-            Association association = (Association) _handleMap.get(handle);
+            Association association = _handleMap.get(handle);
 
             if (association.hasExpired()) {
                 handleToRemove.add(handle);

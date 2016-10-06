@@ -62,14 +62,16 @@ public class ValidDataGui extends javax.swing.JPanel {
 
         addButton.setText("Add");
         addButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addButtonActionPerformed(evt);
             }
         });
 
         removeButton.setText("Remove");
         removeButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 removeButtonActionPerformed(evt);
             }
         });
@@ -90,14 +92,16 @@ public class ValidDataGui extends javax.swing.JPanel {
 
         upBotton.setText("▲");
         upBotton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 upBottonActionPerformed(evt);
             }
         });
 
         downButton.setText("▼");
         downButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 downButtonActionPerformed(evt);
             }
         });

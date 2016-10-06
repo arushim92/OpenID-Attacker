@@ -19,8 +19,7 @@
 package wsattacker.sso.openid.attacker.evaluation.strategies;
 
 import org.apache.commons.lang3.StringUtils;
-import uk.ac.shef.wit.simmetrics.similaritymetrics.AbstractStringMetric;
-import uk.ac.shef.wit.simmetrics.similaritymetrics.ChapmanLengthDeviation;
+import uk.ac.shef.wit.simmetrics.similaritymetrics.*;
 import wsattacker.sso.openid.attacker.evaluation.ServiceProvider;
 import wsattacker.sso.openid.attacker.evaluation.ServiceProvider.User;
 

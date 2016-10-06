@@ -144,9 +144,11 @@ public class SearchReplaceAttackParameterGui extends AbstractAttackParameterGui 
         setMinimumSize(new Dimension(400, 146));
         setName("\"Parameter\""); // NOI18N
         addHierarchyBoundsListener(new HierarchyBoundsListener() {
-            public void ancestorMoved(HierarchyEvent evt) {
+            @Override
+			public void ancestorMoved(HierarchyEvent evt) {
             }
-            public void ancestorResized(HierarchyEvent evt) {
+            @Override
+			public void ancestorResized(HierarchyEvent evt) {
                 formAncestorResized(evt);
             }
         });
@@ -170,7 +172,8 @@ public class SearchReplaceAttackParameterGui extends AbstractAttackParameterGui 
         bindingGroup.addBinding(binding);
 
         deleteButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 deleteButtonActionPerformed(evt);
             }
         });
@@ -184,7 +187,8 @@ public class SearchReplaceAttackParameterGui extends AbstractAttackParameterGui 
         bindingGroup.addBinding(binding);
 
         reloadButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 reloadButtonActionPerformed(evt);
             }
         });
@@ -192,7 +196,8 @@ public class SearchReplaceAttackParameterGui extends AbstractAttackParameterGui 
         upButton.setText("▲");
         upButton.setMargin(new Insets(2, 0, 2, 0));
         upButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 upButtonActionPerformed(evt);
             }
         });
@@ -200,7 +205,8 @@ public class SearchReplaceAttackParameterGui extends AbstractAttackParameterGui 
         downButton.setText("▼");
         downButton.setMargin(new Insets(2, 0, 2, 0));
         downButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 downButtonActionPerformed(evt);
             }
         });
@@ -320,14 +326,16 @@ public class SearchReplaceAttackParameterGui extends AbstractAttackParameterGui 
 
         addButton.setText("Add Search/Replace");
         addButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 addButtonActionPerformed(evt);
             }
         });
 
         removeButton.setText("Remove Selected");
         removeButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            @Override
+			public void actionPerformed(ActionEvent evt) {
                 removeButtonActionPerformed(evt);
             }
         });

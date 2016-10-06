@@ -202,19 +202,22 @@ public class EvaluationGui extends javax.swing.JPanel {
 
         serviceProviderTextField.setText("https://example.com/login");
         serviceProviderTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 serviceProviderTextFieldActionPerformed(evt);
             }
         });
         serviceProviderTextField.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+            @Override
+			public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 serviceProviderTextFieldPropertyChange(evt);
             }
         });
 
         trainButton.setText("Train");
         trainButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 trainButtonActionPerformed(evt);
             }
         });
@@ -230,14 +233,16 @@ public class EvaluationGui extends javax.swing.JPanel {
 
         saveTrainingButton.setText("Save Training");
         saveTrainingButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveTrainingButtonActionPerformed(evt);
             }
         });
 
         loadTrainingButton.setText("Load Training");
         loadTrainingButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loadTrainingButtonActionPerformed(evt);
             }
         });
@@ -247,14 +252,16 @@ public class EvaluationGui extends javax.swing.JPanel {
 
         performAttackButton.setText("Perform Attack");
         performAttackButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 performAttackButtonActionPerformed(evt);
             }
         });
 
         performAllAttacksButton.setText("Perform All Attacks");
         performAllAttacksButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 performAllAttacksButtonActionPerformed(evt);
             }
         });
@@ -299,7 +306,8 @@ public class EvaluationGui extends javax.swing.JPanel {
 
         cancelButton.setText("Cancel");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+            @Override
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelButtonActionPerformed(evt);
             }
         });
@@ -475,7 +483,7 @@ public class EvaluationGui extends javax.swing.JPanel {
     }//GEN-LAST:event_serviceProviderTextFieldPropertyChange
 
     private void saveTrainingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveTrainingButtonActionPerformed
-        String fileName = (String) JOptionPane.showInputDialog("Please enter a file name: ");
+        String fileName = JOptionPane.showInputDialog("Please enter a file name: ");
 
         if (fileName == null) {
             JOptionPane.showMessageDialog(null, "Error: cannot save training data!");

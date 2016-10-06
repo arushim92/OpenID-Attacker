@@ -43,7 +43,6 @@ import org.jdesktop.beansbinding.Converter;
 import org.jdesktop.beansbinding.ELProperty;
 import org.jdesktop.swingbinding.JTableBinding;
 import org.jdesktop.swingbinding.SwingBindings;
-import wsattacker.sso.openid.attacker.config.OpenIdServerConfiguration;
 import wsattacker.sso.openid.attacker.controller.ServerController;
 import wsattacker.sso.openid.attacker.log.RequestType;
 import wsattacker.sso.openid.attacker.server.IdpType;
@@ -160,7 +159,8 @@ public class ServerConfigurationGui extends javax.swing.JPanel {
                 bindingGroup.addBinding(binding);
 
                 startButton.addActionListener(new ActionListener() {
-                        public void actionPerformed(ActionEvent evt) {
+                        @Override
+						public void actionPerformed(ActionEvent evt) {
                                 startButtonActionPerformed(evt);
                         }
                 });
@@ -182,7 +182,8 @@ public class ServerConfigurationGui extends javax.swing.JPanel {
                 bindingGroup.addBinding(binding);
 
                 stopButton.addActionListener(new ActionListener() {
-                        public void actionPerformed(ActionEvent evt) {
+                        @Override
+						public void actionPerformed(ActionEvent evt) {
                                 stopButtonActionPerformed(evt);
                         }
                 });

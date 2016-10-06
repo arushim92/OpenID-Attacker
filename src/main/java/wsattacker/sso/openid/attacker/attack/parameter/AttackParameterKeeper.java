@@ -164,7 +164,7 @@ public class AttackParameterKeeper extends AbstractBean implements Serializable,
 
     @Override
     public void listElementsAdded(ObservableList list, int index, int length) {
-        List<AttackParameter> addedAttackParameters = (List<AttackParameter>) list;
+        List<AttackParameter> addedAttackParameters = list;
         boolean signedChanged = false;
         int last = index + length;
         for (int i = index; i < last; ++i) {
@@ -181,7 +181,7 @@ public class AttackParameterKeeper extends AbstractBean implements Serializable,
 
     @Override
     public void listElementsRemoved(ObservableList list, int index, List oldElements) {
-        List<AttackParameter> removedAttackParameter = (List<AttackParameter>) oldElements;
+        List<AttackParameter> removedAttackParameter = oldElements;
         boolean signedChanged = false;
         for (AttackParameter removedParameter : removedAttackParameter) {
             String removedName = removedParameter.getName();
