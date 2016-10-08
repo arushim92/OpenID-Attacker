@@ -10,3 +10,5 @@ openId_associations.ser
 images
 report
 training
+.settings
+bin/
